@@ -1,0 +1,96 @@
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  margin-top: -20px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+button {
+  font-size: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid white;
+  padding: 5px 15px;
+  background-color: hsl(120, 50%, 65%, 0.8);
+  color: white;
+  filter: drop-shadow(3px 3px 5px rgb(4, 1, 11));
+  cursor: pointer;
+}
+
+.btn {
+  display: grid;
+  place-items: center;
+}
+
+.background {
+  height: 400px;
+  width: 400px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+  background: linear-gradient(
+    40deg,
+    rgb(232, 238, 60) 0%,
+    rgb(227, 152, 2) 20%,
+    rgba(255, 157, 0, 0.616) 24%,
+    rgb(241, 0, 0) 39%,
+    rgb(255, 8, 0) 97%
+  );
+  background-size: 200% 200%;
+  filter: drop-shadow(16px 16px 20px rgb(107, 107, 190));
+  animation: gradient 1.5s infinite, blur 10s infinite;
+}
+
+.container {
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: grey;
+  border-radius: 10px;
+  opacity: 0.37;
+  filter: blur(3px);
+}
+
+.center {
+  color: white;
+  max-width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes blur {
+  0% {
+    filter: blur(0px);
+  }
+  50% {
+    filter: blur(5px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
