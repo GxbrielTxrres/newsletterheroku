@@ -58,6 +58,6 @@ app.post("/failure", function (req, res) {
 //bring in needed files
 app.use(express.static(__dirname + "/public"));
 
-app.listen(3000 || process.env.PORT, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log("This server is live at port 3000");
 });
