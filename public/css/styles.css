@@ -56,6 +56,10 @@ button:hover {
   border-radius: 5px 5px 0 0;
 }
 
+.middle {
+  border-radius: 0 0 0 0;
+}
+
 .bottom {
   border-radius: 0 0 5px 5px;
 }
