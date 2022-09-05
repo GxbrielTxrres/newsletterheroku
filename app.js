@@ -18,6 +18,8 @@ app.post("/", function (req, res) {
   const lastName = req.body.lastName;
   const email = req.body.email;
 
+  console.log(req.body);
+
   const data = {
     key: "9ec6ce7a8196890b8f4473e512f56bb8-us17",
     email_address: email,
@@ -37,7 +39,7 @@ app.post("/", function (req, res) {
     auth: "GT:9ec6ce7a8196890b8f4473e512f56bb8-us17",
   };
 
-  const request = https.request(url, options, function (response) {
+  const request = https.request(url, options, (response) => {
     if (response.statusCode === 200) {
       res.sendFile(__dirname + "/public/success.html");
     } else {
